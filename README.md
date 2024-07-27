@@ -1,5 +1,6 @@
 # arm_task
  taprobane arm task(sub)
+wrtn_urdf and wrtn_moveit_config folders are ros2 packages.
 
 1. the arm cad file converted into a urdf file using sw2urdf tool in solidworks.
 2. the urdf file converted into a ros2 supported urdf file.
