@@ -1,0 +1,9 @@
+# Default initial positions for wrtn_urdf's ros2_control fake system
+
+initial_positions:
+  fngrL_Joint: 0
+  grpbass_Joint: 0
+  larm_Joint: 0
+  shldr_Joint: 0
+  uarm_Joint: 0
+  wrist_Joint: 0

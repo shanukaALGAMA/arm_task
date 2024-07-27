@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="wrtn_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0292064837891756 1.03070798423976E-11 0.0077309438876114"
+        rpy="0 0 0" />
+      <mass
+        value="2.5433833664806" />
+      <inertia
+        ixx="0.00628163463085114"
+        ixy="2.26019615440288E-19"
+        ixz="1.98730412004206E-05"
+        iyy="0.00637258484633234"
+        iyz="-1.40886315484363E-19"
+        izz="0.0126050197334029" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrtn_urdf/meshes/visual/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.650980392156863 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrtn_urdf/meshes/visual/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="shldr_Link">
+    <inertial>
+      <origin
+        xyz="9.29185044983016E-08 -0.00726683987372272 -0.0130827590649837"
+        rpy="0 0 0" />
+      <mass
+        value="0.547968899396397" />
+      <inertia
+        ixx="0.000911442104513962"
+        ixy="-3.38184624978878E-11"
+        ixz="9.43198637195028E-13"
+        iyy="0.000534320721116197"
+        iyz="5.2094853471738E-05"
+        izz="0.000696689325254328" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrtn_urdf/meshes/visual/shldr_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrtn_urdf/meshes/visual/shldr_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shldr_Joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.078"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="shldr_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.142"
+      upper="3.142"
+      effort="400"
+      velocity="2" />
+  </joint>
+  <link
+    name="uarm_Link">
+    <inertial>
+      <origin
+        xyz="-1.33818128827956E-07 0.250000006515255 1.99640421555403E-08"
+        rpy="0 0 0" />
+      <mass
+        value="1.26674905761263" />
+      <inertia
+        ixx="0.0392454061401057"
+        ixy="-1.15832267774499E-08"
+        ixz="1.7285737985885E-09"
+        iyy="0.000553103031324755"
+        iyz="1.59021896893996E-09"
+        izz="0.0391174058860417" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrtn_urdf/meshes/visual/uarm_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrtn_urdf/meshes/visual/uarm_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="uarm_Joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.110000000000001 0"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="shldr_Link" />
+    <child
+      link="uarm_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="300"
+      velocity="2" />
+  </joint>
+  <link
+    name="larm_Link">
+    <inertial>
+      <origin
+        xyz="-7.73160084843738E-08 0.223699510365731 0.00645354848668905"
+        rpy="0 0 0" />
+      <mass
+        value="0.965720738719143" />
+      <inertia
+        ixx="0.0343996252283292"
+        ixy="4.33113296467829E-08"
+        ixz="-1.37903031139222E-09"
+        iyy="0.00066469893618089"
+        iyz="0.00103626732122399"
+        izz="0.0339695103321179" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrtn_urdf/meshes/visual/larm_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrtn_urdf/meshes/visual/larm_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="larm_Joint"
+    type="revolute">
+    <origin
+      xyz="0 0.5 -0.12"
+      rpy="0 0 -1.5707963267949" />
+    <parent
+      link="uarm_Link" />
+    <child
+      link="larm_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-4.5"
+      upper="1.4"
+      effort="300"
+      velocity="2" />
+  </joint>
+  <link
+    name="wrist_Link">
+    <inertial>
+      <origin
+        xyz="-8.52725409172805E-08 0.0172901666757576 -0.00601400690219769"
+        rpy="0 0 0" />
+      <mass
+        value="0.16716236671567" />
+      <inertia
+        ixx="0.000165624520780463"
+        ixy="4.58227920825603E-11"
+        ixz="1.82563616581528E-11"
+        iyy="8.12875362367742E-05"
+        iyz="-1.73820838865349E-05"
+        izz="0.000118622681045282" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrtn_urdf/meshes/visual/wrist_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrtn_urdf/meshes/visual/wrist_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wrist_Joint"
+    type="revolute">
+    <origin
+      xyz="0 0.5 0.1"
+      rpy="0 0 0" />
+    <parent
+      link="larm_Link" />
+    <child
+      link="wrist_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.142"
+      upper="3.142"
+      effort="200"
+      velocity="2" />
+  </joint>
+  <link
+    name="grpbass_Link">
+    <inertial>
+      <origin
+        xyz="-4.01316100507032E-05 -0.000357188529745089 -0.0105954167816413"
+        rpy="0 0 0" />
+      <mass
+        value="0.012392138493227" />
+      <inertia
+        ixx="1.71847797446363E-06"
+        ixy="-1.27640907708762E-10"
+        ixz="-6.75941559152676E-10"
+        iyy="1.74594896420552E-06"
+        iyz="-2.20155538419299E-08"
+        izz="2.28626810002326E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrtn_urdf/meshes/visual/grpbass_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrtn_urdf/meshes/visual/grpbass_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="grpbass_Joint"
+    type="revolute">
+    <origin
+      xyz="0 0.0769999999999944 0"
+      rpy="1.5707963267949 1.5707963267949 0" />
+    <parent
+      link="wrist_Link" />
+    <child
+      link="grpbass_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.142"
+      upper="3.142"
+      effort="200"
+      velocity="2" />
+  </joint>
+  <link
+    name="fngrR_Link">
+    <inertial>
+      <origin
+        xyz="0.00708909138079242 0.0659054695280851 -0.000206436969597545"
+        rpy="0 0 0" />
+      <mass
+        value="0.032818259969324" />
+      <inertia
+        ixx="4.01008764613634E-05"
+        ixy="-4.96505976274912E-06"
+        ixz="9.5678846667765E-09"
+        iyy="4.36450856319505E-06"
+        iyz="6.85285052330905E-08"
+        izz="3.86816595368864E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrtn_urdf/meshes/visual/fngrR_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrtn_urdf/meshes/visual/fngrR_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fngrR_Joint"
+    type="revolute">
+    <origin
+      xyz="-0.0179999999866297 0.000875000000095771 -0.0449999999877976"
+      rpy="-1.5707963267949 0.186273469161353 0" />
+    <parent
+      link="grpbass_Link" />
+    <child
+      link="fngrR_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.062"
+      upper="0"
+      effort="200"
+      velocity="2" />
+    <mimic
+      joint="fngrL_Joint"
+      multiplier="-1"
+      offset="0" />
+  </joint>
+  <link
+    name="fngrL_Link">
+    <inertial>
+      <origin
+        xyz="-0.00708909134419022 0.0659054694872668 0.000206436980062508"
+        rpy="0 0 0" />
+      <mass
+        value="0.0328182600182939" />
+      <inertia
+        ixx="4.01008764865379E-05"
+        ixy="4.96505977098165E-06"
+        ixz="9.56788167092588E-09"
+        iyy="4.36450856603979E-06"
+        iyz="-6.85284983057251E-08"
+        izz="3.86816595609957E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrtn_urdf/meshes/visual/fngrL_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrtn_urdf/meshes/visual/fngrL_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fngrL_Joint"
+    type="revolute">
+    <origin
+      xyz="0.0179999999873413 0.000874999999837534 -0.0449999999992026"
+      rpy="-1.5707963267949 -0.186273469161356 0" />
+    <parent
+      link="grpbass_Link" />
+    <child
+      link="fngrL_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0.062"
+      effort="200"
+      velocity="2" />
+  </joint>
+</robot>
